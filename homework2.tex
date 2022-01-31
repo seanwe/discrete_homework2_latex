@@ -1,0 +1,169 @@
+% Comment lines start with %
+% LaTeX commands start with \
+% This template was provided by Jennifer Welch for CSCE 222-200, Honors, Spring 2015
+
+\documentclass[12pt]{article}  % This is an article with font size 12-point
+
+% Packages add features
+\usepackage{times}     % font choice
+\usepackage{amsmath}   % American Mathematical Association math formatting
+\usepackage{amsthm}    % nice formatting of theorems
+\usepackage{latexsym}  % provides some more symbols
+\usepackage{fullpage}  % uses most of the page (1-inch margins)
+
+\setlength{\parskip}{.1in}  % increase the space between paragraphs
+
+\renewcommand{\baselinestretch}{1.1}  % increase the space between lines
+
+% Convenient renaming of symbols for logic formulas
+\newcommand{\NOT}{\neg}
+\newcommand{\AND}{\wedge}
+\newcommand{\OR}{\vee}
+\newcommand{\XOR}{\oplus}
+\newcommand{\IMPLIES}{\rightarrow}
+\newcommand{\IFF}{\leftrightarrow}
+
+% Actual content starts here.
+\begin{document}
+
+\begin{center}         % center all the material between begin and end
+{\large                % use larger font
+CSCE 222 (Carlisle), Discrete Structures for Computing \\  % \\ is line break
+Spring 2022 \\
+Homework 2}
+\end{center}
+\rule{6in}{.1pt}       % horizontal line 6 inches long and .1 point high
+\begin{center}
+{\large
+Type your name below the pledge to sign\\
+On my honor, as an Aggie, I have neither given nor received unauthorized aid on this academic work.\\
+**Sean Wells**}
+\end{center}
+
+% blank line separates paragraphs.  First line of a paragraph is automatically
+% indented.  
+
+\rule{6in}{.1pt}       % horizontal line 6 inches long and .1 point high
+                    
+\noindent              % don't indent
+{\bf Instructions:}    % \bf makes text boldface
+                       % \em makes text emphasized (italics)
+
+\begin{itemize}        % makes an itemized list
+\item The exercises are from the textbook.  You are encouraged to work
+      extra problems to aid in your learning; remember, the solutions to 
+      the odd-numbered problems are in the back of the book.
+\item Grading will be based on correctness, clarity, and whether your
+      solution is of the appropriate length.
+\item Always justify your answers.
+\item Don't forget to acknowledge all sources of assistance in the section below, and write up your solutions on your own.
+\item {\em Turn in .pdf file to Gradescope by the start of class on Monday, January 31, 2022.} It is simpler to put each problem on its own page using the LaTeX clearpage command.
+\end{itemize}
+
+\rule{6in}{.1pt}       % horizontal line 6 inches long and .1 point high
+
+{\bf Help Received:}    % \bf makes text boldface
+\begin{itemize}
+\item List any help received here, or "NONE".
+\end{itemize}
+
+\rule{6in}{.1pt}       % horizontal line 6 inches long and .1 point high
+\clearpage
+\noindent
+{\bf LaTeX hints:}  Read this .tex file for some explanations that are in
+the comments.
+
+Math formulas are enclosed in \$ signs, e.g., {\tt \$x + y = z\$}
+becomes $x + y = z$.
+
+Logical operators: $\NOT, \AND, \OR, \XOR, \IMPLIES, \IFF$.
+
+Here is a truth table using the ``tabular'' environment:
+
+\begin{center}
+\begin{tabular}{|c|c|}  % two columns, both centered (c), 
+                        % divided by vertical lines (|)
+\hline                  % horizontal line
+$p$ & $\NOT p$ \\       % separate column entries with &
+\hline
+\hline
+T & F \\
+\hline
+F & T \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\rule{6in}{.1pt}       % horizontal line 6 inches long and .1 point high
+
+%---------------------------------------------------------------------
+
+% \subsection makes a subsection heading; * leaves it unnumbered.
+% (Usually subsections are inside sections, but the \section command
+% used a font that was larger than I wanted.)
+
+
+%--------------------------------------------------------------------
+
+\subsection*{Exercises for Section 1.5:}     
+
+\noindent
+{\bf 16(e): (2 pt)}
+** f(x,g) = that there is an x -student- in a g -grade-\\ p(s,m) there is an s -student- in an m -major-.\\
+$\exists m \forall g \exists x (p(s,m) \AND f(x,g)$ **
+
+\noindent
+{\bf 32(d): (2 pt)}
+** $\NOT(\forall y \exists x \exists z(T(x,y,z) \OR Q(x,y))) \\ \equiv \exists y \forall x \forall z (\NOT T(x,y,z) \AND \NOT Q(x,y)) $**
+
+\noindent
+{\bf 44: (2 pt)}
+** For $ax^2 + bx + c = 0 \AND a \NOT= 0$ it can be stated that \\$\forall a \forall b \forall c\forall x(\exists!x1 \exists!x2(ax1^2 + bx1 + c = 0 \AND ax2^2 + bx2 + c = 0 \AND x1 \NOT = x2))$ \**
+
+\subsection*{Exercises for Section 1.6:}     
+
+\noindent
+{\bf 10(a,c,e): (2 point)}
+** a) I did not play hockey. The conclusion of using the whirlpool is direct, so the contrapositive leads to I was not sore, then I did not play hockey. c) Dragonflies have 6 legs direct, spiders are not insects contrapositive, no claim can be made about spiders eating insects. e) Tofu does not taste good direct, you only eat unhealthy contrapositive, no claim can be made if you do not eat tofu, cheeseburgers taste good inverse direct. **
+ 
+{\bf 16(a-c): (2 point)}
+** a) This is correct, Mia cannot be enrolled in the uni. if she hasn't lived in a dorm because all uni. students live there. b) This is incorrect, a conclusion can not be made about Issac's car because the statement cannot be tested with a false hypothesis. This is incorrect, whilst all action movies Quincy does enjoy, it is unknown if he doesn't like other genres: therefore you cannot claim the genre of a movie he likes. **
+
+\noindent
+{\bf 24: (2 point)}
+\\ Note that the extra parentheses on the last line are a typo, not the error.\\
+** 3. Simplification does not work here. Why? Q(c) may be true while P(c) is false, which would still output true; P(c) alone would not.\\4. Universal generalization won't work here. Why? In 3 we declared P(c) could be false thus it isn't always true. \\5. Same response as 3 but for Q(c) rather than P(c). \\6. Same response as 4 but for Q(c) rather than P(c). \\7. Is not equivalent to the original premise because this one states all x for P(x) or all x for Q(x) instead of all x for P(x) or Q(x). **
+
+\noindent
+{\bf 28: (2 point)}
+** $\forall x(P(x) \OR Q(x)) \AND \forall x ((\NOT P(x) \AND Q(x)) \IMPLIES R(x))$\\ 1. $\forall x(P(x) \OR Q(x))$ Premise\\
+ 2. $P(a) \OR Q(a)$ Universal instantiation from (1)\\
+ 3. $\forall x ((\NOT P(x) \AND Q(x)) \IMPLIES R(x))$ Premise\\
+ 4. $(\NOT P(a) \and Q(a)) \IMPLIES R(a)$ Universal instantiation from (3)\\
+ 5. $\NOT P(a) \IMPLIES R(a)$ simplification of (4)\\
+ 6. $\NOT R(a) \IMPLIES P(a)$ contraposition of (5)\\
+ 7. $\forall x(\NOT R(x) \IMPLIES P(x))$ Universal generalization of (6)
+ **
+
+\subsection*{Exercises for Section 1.7:}     
+
+\noindent
+{\bf 7: (2 points)}
+** n is odd thus $n = 2k + 1\\ 2k + 1 = k^2 + 2k + 1 - k^2 = (k + 1)^2 - k^2 = n$. n is odd thus the difference of two squares is odd. **
+
+\noindent
+{\bf 20(a-b): (2 points)}
+** a) n = 2k + 1 \IMPLIES 3(2k + 1) + 2 is odd; 6k + 3 + 2 = 2(3k) + 5. Because the contraposition is odd the direct must be even. \\b) 3n + 2 is even and n is odd; n = 2k + 1, 3(2k + 1) + 2 = 6k + 3 + 2 = 6k + 5. Because the contradiction claims 3n + 1 is even and odd - resulting in an absurdity - it must prove the direct is true. **
+
+
+\noindent
+{\bf 26: (2 points)}
+** If d >= 3 for 25 days in the year to be in the same month we can let d < 3 for the same to check for contradiction. For 12 months in the year we multiply 12 by 2 and get 24 max days to check, which contradicts the claim to 25 days to check. So due to contradiction we prove that there are at least 3 days in the same month when testing 25 days in a year. **
+
+
+\noindent
+{\bf POST SCRIPT:}
+~~ If the documentation views poorly it is because the compiler was down and I could not check the output ~~
+\end{document}
